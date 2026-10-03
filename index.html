@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashutosh Kumar — Founder of Ashutosh Software Services & Software Engineer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Official website of Ashutosh Kumar — Founder of Ashutosh Software Services (Est. 01/04/2024) and Software Engineer with 4 years of experience in C#, ASP.NET Core, Oracle, SQL, and Web-Based Software (COIN Crypto Platform, HIMS, School & Clinic Systems).">
+  <meta name="keywords" content="Ashutosh Kumar, Ashutosh Software Services, Founder, Software Engineer, COIN Crypto Project, C#, ASP.NET Core, MVC Core, Oracle, SQL, HIMS, School Management System, Clinic Management System">
+  <meta name="author" content="Ashutosh Kumar">
+
+  <!-- OpenGraph / Social Media -->
+  <meta property="og:title" content="Ashutosh Kumar — Founder & Software Engineer">
+  <meta property="og:description" content="Founder of Ashutosh Software Services (Est. 01/04/2024). Building customized web software (COIN Crypto System, HIMS, School & Clinic Systems, Personal Websites).">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/logo.png">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/cinematic.css">
+
+  <!-- External Libraries (Three.js & Confetti) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+</head>
+<body class="mode-founder">
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor" class="custom-cursor"></div>
+  <div id="custom-cursor-follower" class="custom-cursor-follower"></div>
+
+  <!-- Background WebGL Canvas & Ambient Glows -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="bg-noise"></div>
+  <div class="ambient-glow glow-gold" style="top: 10%; left: 10%;"></div>
+  <div class="ambient-glow glow-purple" style="top: 40%; right: 5%;"></div>
+  <div class="ambient-glow glow-cyan" style="bottom: 15%; left: 30%;"></div>
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <img src="assets/images/logo.png" alt="Ashutosh Software Services Logo" class="preloader-logo-img">
+      <div class="preloader-logo">ASHUTOSH SOFTWARE SERVICES</div>
+      <div class="loader-bar-container">
+        <div id="loader-bar" class="loader-bar"></div>
+      </div>
+      <div class="preloader-status"><i class="fas fa-crown"></i> FOUNDED 01/04/2024 • INITIALIZING ECOSYSTEM...</div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Ashutosh Software Services Logo" class="nav-logo-img">
+        <span class="logo-text">Ashutosh Software Services<span style="color:var(--accent-primary)">.</span></span>
+      </a>
+
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Solutions</a></li>
+        <li><a href="#tech" class="nav-link">Tech Stack</a></li>
+        <li><a href="#terminal" class="nav-link">CLI Terminal</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Dual Mode Switcher (Default: Founder) -->
+        <div class="mode-toggle" title="Switch Perspective View">
+          <button id="mode-founder" class="mode-btn active" title="Founder Mode">
+            <i class="fas fa-crown"></i> <span class="mode-text">Founder</span>
+          </button>
+          <button id="mode-engineer" class="mode-btn" title="Software Engineer Mode">
+            <i class="fas fa-code"></i> <span class="mode-text">Engineer</span>
+          </button>
+        </div>
+
+        <!-- Audio FX Toggle -->
+        <button id="sound-toggle" class="sound-btn" title="Toggle Sound FX">
+          <i class="fas fa-volume-high"></i>
+        </button>
+
+        <!-- Mobile Drawer Trigger -->
+        <button id="nav-mobile-trigger" class="nav-mobile-trigger" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero section-padding">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Text Content -->
+          <div class="hero-text-col">
+            <div class="hero-tag">
+              <span class="pulse-dot"></span>
+              <span>FOUNDER @ ASHUTOSH SOFTWARE SERVICES (EST. 01/04/2024)</span>
+            </div>
+
+            <h1 class="hero-title">
+              Innovative <span class="gradient-text">Web Software</span>.<br>
+              Engineered for <span class="gradient-text-alt">Impact</span>.
+            </h1>
+
+            <p class="hero-subhead">
+              I am <strong>Ashutosh Kumar</strong> — Founder of <strong>Ashutosh Software Services</strong> (Founded April 1, 2024) and Software Engineer with <strong>4 Years of Experience</strong>. Architecting enterprise web systems including <strong>COIN (Crypto & Digital Asset Trading System)</strong>, HIMS, School & Clinic Systems, and Personal Websites.
+            </p>
+
+            <div class="hero-roles">
+              <div class="role-badge"><i class="fa-solid fa-crown"></i> Founder @ Ashutosh Software Services</div>
+              <div class="role-badge"><i class="fa-solid fa-coins"></i> COIN Crypto Platform</div>
+              <div class="role-badge"><i class="fa-solid fa-laptop-code"></i> 4 Years Engineering Exp.</div>
+              <div class="role-badge"><i class="fa-solid fa-database"></i> C# • .NET MVC Core • Oracle • SQL</div>
+            </div>
+
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary btn-glow">
+                <span>Request Custom Software</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                <i class="fas fa-layer-group"></i>
+                <span>View COIN & Solutions</span>
+              </a>
+              <a href="https://wa.me/919702458473?text=Hi%20Ashutosh,%20I%20want%20to%20discuss%20a%20custom%20software%20project%20for%20Ashutosh%20Software%20Services!" target="_blank" class="btn btn-secondary" style="border-color: rgba(0, 245, 160, 0.4); color: #00f5a0;">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp Direct</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual Face Card -->
+          <div class="hero-visual">
+            <div class="avatar-frame holo-effect glow-border">
+              <img src="assets/images/profile.png" alt="Ashutosh Kumar - Real Authentic Photo" class="avatar-img">
+              <div class="avatar-overlay-gradient"></div>
+              
+              <!-- Floating Badge -->
+              <div class="avatar-badge-floating">
+                <div class="badge-info">
+                  <h4>Ashutosh Kumar</h4>
+                  <p>Founder & Lead Architect</p>
+                </div>
+                <div class="badge-stat">
+                  <div class="number">01/04/24</div>
+                  <div class="label">Founded</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Top HUD -->
+            <div class="floating-hud">
+              <i class="fas fa-crown" style="color:var(--accent-primary)"></i>
+              <span>ASHUTOSH SOFTWARE SERVICES</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-num">01/04/24<span></span></div>
+            <div class="stat-lbl">Company Founded Date</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">4<span>+ Years</span></div>
+            <div class="stat-lbl">Software Engineering Exp.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">COIN<span> System</span></div>
+            <div class="stat-lbl">Crypto & Wallet Platform</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">HIMS<span> & Clinic</span></div>
+            <div class="stat-lbl">Healthcare & Web Apps</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & DUAL IDENTITY SECTION -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-user-gear"></i> Leadership & Craft</div>
+          <h2 class="section-title">Founder Vision & <span class="gradient-text">Engineering Core</span></h2>
+          <p class="section-desc">Delivering tailored web-based software solutions for fintech, testing labs, healthcare, education, and enterprises.</p>
+        </div>
+
+        <div class="split-identity-grid">
+          
+          <!-- Identity Card 1: Founder (PRIMARY HIGHLIGHT) -->
+          <div class="glass-card identity-card founder-card">
+            <div>
+              <div class="icon-box"><i class="fas fa-crown"></i></div>
+              <h3 class="identity-title">As Founder of Ashutosh Software Services</h3>
+              <p class="identity-desc">
+                Founded on <strong>01/04/2024</strong>, Ashutosh Software Services is dedicated to building robust, web-based customized software tailored precisely to business and industrial workflows.
+              </p>
+              <ul class="identity-list">
+                <li><i class="fas fa-coins"></i> <strong>COIN Project</strong>: Crypto Coin Trading & Digital Asset Management Platform.</li>
+                <!-- <li><i class="fas fa-flask"></i> <strong>LIMS (Testing Lab System)</strong>: Medical Diagnostics & Mechanical/Industrial Testing (Tensile Testing, Physical/Chemical Analysis).</li> -->
+                <li><i class="fas fa-hospital"></i> <strong>HIMS</strong>: Hospital Information Management Systems.</li>
+                <li><i class="fas fa-user-doctor"></i> <strong>Clinic Management System</strong>: Appointments, billing & patient records.</li>
+                <li><i class="fas fa-graduation-cap"></i> <strong>School Management System</strong>: Academics, attendance & student portals.</li>
+                <li><i class="fas fa-globe"></i> <strong>Personal Websites</strong>: Static & Dynamic high-impact web portals.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Identity Card 2: Engineer -->
+          <div class="glass-card identity-card">
+            <div>
+              <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+              <h3 class="identity-title">As a Software Engineer</h3>
+              <p class="identity-desc">
+                With <strong>4 Years of hands-on software engineering work experience</strong>, specializing in scalable backend architecture, database optimization, and modern web interfaces.
+              </p>
+              <ul class="identity-list">
+                <li><i class="fas fa-code"></i> <strong>Backend & Core</strong>: C#, ASP.NET, .NET MVC Core</li>
+                <li><i class="fas fa-database"></i> <strong>Databases & SQL</strong>: Oracle Database, SQL Server, Complex Queries</li>
+                <li><i class="fas fa-layer-group"></i> <strong>Web Tech Stack</strong>: HTML5, CSS3, JavaScript (ES6+), Bootstrap</li>
+                <li><i class="fas fa-shield-halved"></i> Enterprise payment logs, security encryption, database tuning & web architecture.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ASHUTOSH SOFTWARE SERVICES SHOWCASE -->
+    <section id="services" class="section-padding" style="background: rgba(10, 14, 26, 0.4);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-cubes"></i> Core Services</div>
+          <h2 class="section-title">Web-Based Software Solutions @ <span class="gradient-text">Ashutosh Software Services</span></h2>
+          <p class="section-desc">Custom web software built from scratch to streamline operations for fintech, industrial testing labs, healthcare, education, and enterprises.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- Service 1: COIN Project -->
+          <div class="glass-card service-card">
+            <i class="fas fa-coins service-icon" style="color:var(--accent-gold)"></i>
+            <h3>COIN (Crypto & Digital Asset Trading)</h3>
+            <p>Enterprise web platform for <strong>Crypto Coin Trading & Wallet Management</strong> — featuring user portfolios, real-time transaction logs, buy/sell modules, payment logs, and support ticketing.</p>
+            <div class="service-tags">
+              <span class="service-tag">COIN Project</span>
+              <span class="service-tag">ASP.NET Core</span>
+              <span class="service-tag">C# / Oracle</span>
+              <span class="service-tag">Payment Logs</span>
+            </div>
+          </div>
+          
+          <!-- Service 2: LIMS (Medical & Mechanical) - COMMENTED OUT -->
+          <!--
+          <div class="glass-card service-card">
+            <i class="fas fa-vial-circle-check service-icon" style="color:var(--accent-secondary)"></i>
+            <h3>LIMS (Testing Lab Software)</h3>
+            <p>Web LIMS for <strong>Medical & Mechanical/Industrial Testing Labs</strong> — handling Tensile Testing, hardness, chemical/physical material analysis, sample tracking, automated certificates & test reports.</p>
+            <div class="service-tags">
+              <span class="service-tag">LIMS</span>
+              <span class="service-tag">Mechanical & Medical</span>
+              <span class="service-tag">Tensile Testing</span>
+              <span class="service-tag">C# / Oracle</span>
+            </div>
+          </div>
+          -->
+
+          <!-- Service 3: HIMS -->
+          <div class="glass-card service-card">
+            <i class="fas fa-hospital service-icon" style="color:var(--accent-primary)"></i>
+            <h3>HIMS (Hospital Management)</h3>
+            <p>Complete web-based hospital management system covering OPD/IPD registration, patient records, pharmacy, ward management, and automated billing.</p>
+            <div class="service-tags">
+              <span class="service-tag">HIMS</span>
+              <span class="service-tag">ASP.NET Core</span>
+              <span class="service-tag">Oracle / SQL</span>
+            </div>
+          </div>
+
+          <!-- Service 4: Clinic Management System -->
+          <div class="glass-card service-card">
+            <i class="fas fa-user-doctor service-icon" style="color:var(--accent-emerald)"></i>
+            <h3>Clinic Management System</h3>
+            <p>Tailored clinic software with instant patient appointment booking, digital prescriptions, EMR history, inventory, and WhatsApp prescription alerts.</p>
+            <div class="service-tags">
+              <span class="service-tag">Clinic EMR</span>
+              <span class="service-tag">Bootstrap UI</span>
+              <span class="service-tag">SQL Server</span>
+            </div>
+          </div>
+
+          <!-- Service 5: School Management System -->
+          <div class="glass-card service-card">
+            <i class="fas fa-graduation-cap service-icon" style="color:var(--accent-gold)"></i>
+            <h3>School Management System</h3>
+            <p>All-in-one web portal for schools & colleges: student admission, online fee collection, attendance tracking, report cards, and parent portals.</p>
+            <div class="service-tags">
+              <span class="service-tag">School ERP</span>
+              <span class="service-tag">Student Portal</span>
+              <span class="service-tag">ASP.NET</span>
+            </div>
+          </div>
+
+          <!-- Service 6: Personal Websites -->
+          <div class="glass-card service-card">
+            <i class="fas fa-laptop-file service-icon" style="color:var(--accent-primary)"></i>
+            <h3>Personal & Corporate Websites</h3>
+            <p>High-end Static & Dynamic personal portfolios, doctor websites, founder sites, and corporate web applications with CMS control.</p>
+            <div class="service-tags">
+              <span class="service-tag">Static & Dynamic</span>
+              <span class="service-tag">HTML/CSS/JS</span>
+              <span class="service-tag">Bootstrap</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED SOLUTIONS SHOWCASE -->
+    <section id="projects" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-folder-open"></i> Portfolio & Flagship Products</div>
+          <h2 class="section-title">Web Software <span class="gradient-text">Showcase</span></h2>
+          <p class="section-desc">Custom web-based applications & enterprise systems developed by Ashutosh Software Services.</p>
+        </div>
+
+        <!-- Project Category Filters -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Solutions</button>
+          <button class="filter-btn" data-filter="coin">COIN (Crypto Platform)</button>
+          <!-- <button class="filter-btn" data-filter="lims">Testing Labs (LIMS)</button> -->
+          <button class="filter-btn" data-filter="health">Healthcare (HIMS & Clinic)</button>
+          <button class="filter-btn" data-filter="edu">School Systems</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Solution 1: COIN Project Card -->
+          <div class="glass-card project-card" data-category="coin">
+            <div class="project-thumb">
+              <img src="assets/images/project-cloud.png" alt="COIN Crypto Trading & Digital Asset Platform">
+              <div class="project-overlay">
+                <a href="#contact" class="btn btn-primary btn-glow" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">
+                  <span>Inquire COIN Architecture</span>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-category">FinTech & Crypto</div>
+              <h3 class="project-title">COIN Trading & Digital Asset Platform</h3>
+              <p class="project-desc">Web software solution for digital coin trading, user account portfolios, buy/sell order processing, payment log audit trails, security encryption, and admin dashboards.</p>
+              <div class="project-tech">
+                <span class="project-tech-badge">ASP.NET Core</span>
+                <span class="project-tech-badge">C# Services</span>
+                <span class="project-tech-badge">Payment Logs</span>
+                <span class="project-tech-badge">Oracle / SQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link-btn">
+                  <span>Inquire Solution</span> <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Solution 2: LIMS (Mechanical & Medical) - COMMENTED OUT -->
+          <!--
+          <div class="glass-card project-card" data-category="lims">
+            <div class="project-thumb">
+              <img src="assets/images/project-saas.png" alt="LIMS Mechanical Tensile & Medical Testing Software">
+              <div class="project-overlay">
+                <a href="#contact" class="btn btn-primary btn-glow" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">
+                  <span>Request LIMS Demo</span>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-category">Testing Lab Software</div>
+              <h3 class="project-title">Web LIMS (Mechanical & Medical Testing)</h3>
+              <p class="project-desc">Web software for <strong>Mechanical (Tensile, Hardness, Material Analysis) & Medical Testing Labs</strong> with sample job management, automated test report generation, and calibration logs.</p>
+              <div class="project-tech">
+                <span class="project-tech-badge">C#</span>
+                <span class="project-tech-badge">ASP.NET MVC Core</span>
+                <span class="project-tech-badge">Tensile Testing</span>
+                <span class="project-tech-badge">Oracle / SQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link-btn">
+                  <span>Inquire Solution</span> <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          -->
+
+          <!-- Solution 3: HIMS -->
+          <div class="glass-card project-card" data-category="health">
+            <div class="project-thumb">
+              <img src="assets/images/project-ai.png" alt="Hospital Information Management System HIMS">
+              <div class="project-overlay">
+                <a href="#contact" class="btn btn-primary btn-glow" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">
+                  <span>Request HIMS Demo</span>
+                </a>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-category">Healthcare Software</div>
+              <h3 class="project-title">Web HIMS (Hospital System)</h3>
+              <p class="project-desc">Web-based Hospital Information Management System handling patient admission, OPD/IPD queues, doctors billing, pharmacy stock, and discharge summaries.</p>
+              <div class="project-tech">
+                <span class="project-tech-badge">ASP.NET MVC Core</span>
+                <span class="project-tech-badge">C#</span>
+                <span class="project-tech-badge">Oracle SQL</span>
+                <span class="project-tech-badge">Bootstrap</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link-btn">
+                  <span>Inquire Solution</span> <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK MATRIX SECTION -->
+    <section id="tech" class="section-padding" style="background: rgba(10, 14, 26, 0.5);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-layer-group"></i> Technical Core</div>
+          <h2 class="section-title">Engineering <span class="gradient-text">Tech Stack</span></h2>
+          <p class="section-desc">4 Years of hands-on software engineering stack powering Ashutosh Software Services applications.</p>
+        </div>
+
+        <div class="tech-matrix-container">
+          
+          <!-- Skill Pills Group -->
+          <div class="tech-categories">
+            <div class="tech-group">
+              <h4><i class="fas fa-code"></i> Core Backend & Frameworks</h4>
+              <div class="skills-flex">
+                <div class="skill-pill"><i class="fas fa-code"></i> C# Language</div>
+                <div class="skill-pill"><i class="fas fa-server"></i> ASP.NET</div>
+                <div class="skill-pill"><i class="fas fa-cube"></i> ASP.NET MVC CORE</div>
+                <div class="skill-pill"><i class="fas fa-network-wired"></i> RESTful Web APIs</div>
+              </div>
+            </div>
+
+            <div class="tech-group">
+              <h4><i class="fas fa-database"></i> Database Architecture & SQL</h4>
+              <div class="skills-flex">
+                <div class="skill-pill"><i class="fas fa-database"></i> Oracle Database</div>
+                <div class="skill-pill"><i class="fas fa-table"></i> SQL & Stored Procedures</div>
+                <div class="skill-pill"><i class="fas fa-server"></i> Microsoft SQL Server</div>
+                <div class="skill-pill"><i class="fas fa-bolt"></i> Database Tuning & Indexing</div>
+              </div>
+            </div>
+
+            <div class="tech-group">
+              <h4><i class="fab fa-html5"></i> Web Frontend & Design</h4>
+              <div class="skills-flex">
+                <div class="skill-pill"><i class="fab fa-html5"></i> HTML / HTML5</div>
+                <div class="skill-pill"><i class="fab fa-css3-alt"></i> CSS / CSS3</div>
+                <div class="skill-pill"><i class="fab fa-js"></i> JavaScript (JS)</div>
+                <div class="skill-pill"><i class="fab fa-bootstrap"></i> Bootstrap UI</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Window Snippet -->
+          <div class="code-preview-window">
+            <div class="code-header">
+              <div class="window-dots">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+              </div>
+              <span class="code-title">AshutoshSoftwareServices.cs</span>
+            </div>
+            <div class="code-body">
+              <pre><code><span class="cmt">// Ashutosh Software Services - Founded 01/04/2024</span>
+<span class="kw">using</span> System;
+<span class="kw">using</span> Oracle.ManagedDataAccess.Client;
+
+<span class="kw">namespace</span> <span class="cls">AshutoshSoftwareServices</span>
+{
+    <span class="kw">public class</span> <span class="cls">CompanyConfig</span>
+    {
+        <span class="kw">public string</span> Founder { <span class="kw">get</span>; } = <span class="str">"Ashutosh Kumar"</span>;
+        <span class="kw">public DateTime</span> FoundedDate { <span class="kw">get</span>; } = <span class="kw">new</span> <span class="cls">DateTime</span>(2024, 4, 1);
+        <span class="kw">public int</span> EngineerExperienceYears { <span class="kw">get</span>; } = 4;
+
+        <span class="kw">public string</span>[] CoreProducts { <span class="kw">get</span>; } = <span class="kw">new</span> <span class="kw">string</span>[]
+        {
+            <span class="str">"COIN (Crypto Trading & Payment Log System)"</span>,
+            <span class="cmt">// "LIMS (Medical & Mechanical Tensile Testing Labs)",</span>
+            <span class="str">"HIMS (Hospital Information System)"</span>,
+            <span class="str">"Clinic Management System"</span>,
+            <span class="str">"School Management System"</span>,
+            <span class="str">"Personal Websites (Static & Dynamic)"</span>
+        };
+    }
+}</code></pre>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DEVELOPER CLI TERMINAL SECTION -->
+    <section id="terminal" class="section-padding">
+      <div class="container terminal-section">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-terminal"></i> Interactive Shell</div>
+          <h2 class="section-title">Ashutosh Software Services <span class="gradient-text">CLI Shell</span></h2>
+          <p class="section-desc">Type commands to explore services, COIN project, founder details, and technical background.</p>
+        </div>
+
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="window-dots">
+              <span class="window-dot dot-red"></span>
+              <span class="window-dot dot-yellow"></span>
+              <span class="window-dot dot-green"></span>
+            </div>
+            <div class="terminal-title"><i class="fas fa-terminal"></i> ashutosh-services-cli v3.0.0 (Founded 01/04/2024)</div>
+            <div></div>
+          </div>
+
+          <div id="terminal-body" class="terminal-body">
+            <div class="terminal-line">
+              Welcome to <span style="color:var(--accent-primary); font-weight:bold;">ashutosh-services-cli</span>! Type '<span class="kw">help</span>' to list all commands.
+            </div>
+          </div>
+
+          <div style="padding: 0 1.5rem 1.25rem 1.5rem;">
+            <div class="terminal-input-row">
+              <span class="terminal-prompt">ashutosh@services:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command (e.g. help, coin, founder, engineer, services, contact)..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER & FOUNDER TIMELINE -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-timeline"></i> Milestones</div>
+          <h2 class="section-title">Experience & <span class="gradient-text">Company Journey</span></h2>
+          <p class="section-desc">From 4 years of hands-on software engineering to founding Ashutosh Software Services.</p>
+        </div>
+
+        <div class="timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-content">
+              <div class="timeline-date">01/04/2024 — PRESENT</div>
+              <h3 class="timeline-title">Founder & CEO</h3>
+              <div class="timeline-role">Ashutosh Software Services</div>
+              <p style="color:var(--text-muted); font-size:0.88rem;">
+                Founded Ashutosh Software Services on April 1, 2024. Building customized web software solutions including COIN (Crypto Platform), HIMS, Clinic & School Systems, and Dynamic Personal Websites.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-content">
+              <div class="timeline-date">4 YEARS EXPERIENCE</div>
+              <h3 class="timeline-title">Software Engineer</h3>
+              <div class="timeline-role">Enterprise Software Development</div>
+              <p style="color:var(--text-muted); font-size:0.88rem;">
+                4 years of professional experience developing robust software systems using C#, ASP.NET, MVC Core, Oracle Database, SQL Server, HTML5, CSS3, JavaScript, and Bootstrap.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SINGLE CLIENT FEEDBACK SECTION: DR. SIDDHANT NAVIK (NO LOGO/AVATAR) -->
+    <section class="section-padding" style="background: rgba(10, 14, 26, 0.5);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-quote-left"></i> Client Feedback</div>
+          <h2 class="section-title">Client <span class="gradient-text">Testimonial</span></h2>
+          <p class="section-desc">Feedback on software development by Ashutosh Software Services.</p>
+        </div>
+
+        <div style="max-width: 760px; margin: 0 auto;">
+          <div class="glass-card testimonial-card holo-effect glow-border" style="padding: 2.25rem; text-align: center; border-color: var(--border-glow);">
+            
+            <div class="stars" style="justify-content: center; font-size: 1.2rem; margin-bottom: 1rem;">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+
+            <p class="quote-text" style="font-size: 1.05rem; line-height: 1.65; color: var(--text-main); font-style: normal; margin-bottom: 1.75rem;">
+              "Ashutosh Software Services delivered an outstanding, high-performance software solution for my medical practice. The cinematic design, speed, and seamless patient experience exceed all expectations!"
+            </p>
+
+            <div class="client-info" style="justify-content: center; flex-direction: column; gap: 0.4rem;">
+              <div class="client-meta" style="text-align: center;">
+                <h4 style="font-family: var(--font-display); font-size: 1.25rem; color: #fff; font-weight: 800; margin-bottom: 0.25rem;">
+                  Dr. Siddhant Navik
+                </h4>
+                <p style="font-size: 0.9rem; color: var(--accent-primary); font-weight: 600; margin-bottom: 0.25rem;">
+                  Consultant Spine Surgeon • Senior Resident
+                </p>
+                <p style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">
+                  MBBS, D. Ortho | FISS (Spine Surgery) • FMISS (MIS Spine Surgery)
+                </p>
+                <div style="margin-top: 0.75rem; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.2rem 0.75rem; background: rgba(0, 245, 160, 0.1); border: 1px solid rgba(0, 245, 160, 0.3); border-radius: 20px; font-size: 0.72rem; color: #00f5a0; font-family: var(--font-mono);">
+                  <i class="fas fa-check-circle"></i> Verified Client Review
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fas fa-paper-plane"></i> Get In Touch</div>
+          <h2 class="section-title">Inquire Custom <span class="gradient-text">Web Software</span></h2>
+          <p class="section-desc">Need a customized COIN Crypto System, HIMS, Clinic/School System, or Personal Website? Contact Ashutosh today.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Direct Channels -->
+          <div>
+            <h3 style="font-family:var(--font-display); font-size:1.4rem; margin-bottom:0.85rem;">Contact Information</h3>
+            <p style="color:var(--text-muted); font-size:0.9rem;">
+              Reach out directly to Ashutosh Kumar for custom web-based software development, systems consulting, or personal websites.
+            </p>
+
+            <div class="contact-info-list">
+              
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-text">
+                  <h5>Direct Email</h5>
+                  <a href="mailto:ashutoshsoftwareservices@gmail.com">ashutoshsoftwareservices@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" style="border-color:rgba(0, 245, 160, 0.4); color:#00f5a0;"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="contact-text">
+                  <h5>Phone & WhatsApp Instant</h5>
+                  <a href="https://wa.me/919702458473?text=Hi%20Ashutosh,%20I%20want%20to%20discuss%20a%20custom%20software%20project%20for%20Ashutosh%20Software%20Services!" target="_blank" style="color:#00f5a0;">+91 97024 58473 (Click to Chat)</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" style="border-color:rgba(255, 183, 3, 0.4); color:var(--accent-gold);"><i class="fas fa-building"></i></div>
+                <div class="contact-text">
+                  <h5>Company HQ</h5>
+                  <p>Ashutosh Software Services (Founded 01/04/2024)</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="glass-card">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">YOUR NAME *</label>
+                  <input type="text" id="name" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">YOUR EMAIL *</label>
+                  <input type="email" id="email" class="form-control" placeholder="rahul@example.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">SOFTWARE TYPE (COIN / HIMS / School / Website)</label>
+                <input type="text" id="subject" class="form-control" placeholder="e.g. COIN Crypto System / HIMS Hospital Software">
+              </div>
+
+              <div class="form-group">
+                <label for="message">SOFTWARE REQUIREMENTS / MESSAGE *</label>
+                <textarea id="message" class="form-control" placeholder="Describe your software requirements, features needed, or scope..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-glow" style="width:100%;">
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Software Inquiry to Ashutosh</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div style="display:flex; flex-direction:column; gap:0.4rem;">
+          <a href="#hero" class="nav-logo" style="display:inline-flex;">
+            <img src="assets/images/logo.png" alt="Ashutosh Software Services Logo" class="nav-logo-img">
+            <span>Ashutosh Software Services</span>
+          </a>
+          <p style="color:var(--text-dim); font-size:0.82rem; max-width:420px;">
+            Founded 01/04/2024. Building customized web software (COIN Crypto Platform, HIMS, School Systems, Personal Websites).
+          </p>
+        </div>
+
+        <div class="social-links">
+          <!-- Hidden Social Links (GitHub, LinkedIn, Twitter) -->
+          <!-- <a href="https://github.com" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a> -->
+          <!-- <a href="https://linkedin.com" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a> -->
+          <!-- <a href="https://twitter.com" target="_blank" class="social-btn" title="Twitter / X"><i class="fab fa-x-twitter"></i></a> -->
+          <a href="https://wa.me/919702458473" target="_blank" class="social-btn" style="color:#00f5a0;" title="WhatsApp Direct"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:ashutoshsoftwareservices@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="status-pill" style="margin-bottom: 0.85rem;">
+          <span class="pulse-dot"></span>
+          <span>Ashutosh Software Services Network: 100% Operational • Founded 01/04/2024</span>
+        </div>
+        <p>© 2026 Ashutosh Kumar • Ashutosh Software Services. All rights reserved.</p>
+      </div>
+    </div>
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/919702458473?text=Hi%20Ashutosh,%20I%20want%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="whatsapp-float" title="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="assets/js/audio-fx.js"></script>
+  <script src="assets/js/three-canvas.js"></script>
+  <script src="assets/js/terminal.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
