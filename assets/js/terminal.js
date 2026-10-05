@@ -92,6 +92,19 @@ Status     : Available for custom web software development & lab software consul
       return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
+    // Quick Command Pills Click Handler
+    const pillBtns = document.querySelectorAll('.term-pill-btn');
+    pillBtns.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const cmd = this.getAttribute('data-cmd');
+        if (cmd && commands[cmd]) {
+          if (window.SoundFX) window.SoundFX.click();
+          const res = commands[cmd]();
+          appendOutput(cmd, res);
+        }
+      });
+    });
+
     terminalInput.addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
         const rawCmd = this.value.trim();
