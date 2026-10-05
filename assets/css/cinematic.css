@@ -18,7 +18,7 @@
   background: linear-gradient(
     45deg,
     transparent 30%,
-    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.12) 50%,
     transparent 70%
   );
   transform: rotate(30deg);
@@ -27,7 +27,7 @@
 }
 
 .holo-effect:hover::after {
-  transform: rotate(30deg) translate(20%, 20%);
+  transform: rotate(30deg) translate(25%, 25%);
 }
 
 /* Neon Glow Border Animator */
@@ -40,7 +40,7 @@
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  padding: 1px;
+  padding: 1.5px;
   background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-gold), var(--accent-primary));
   background-size: 300% 100%;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -48,12 +48,59 @@
   mask-composite: exclude;
   pointer-events: none;
   animation: borderGlow 6s linear infinite;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 @keyframes borderGlow {
   0% { background-position: 0% 0%; }
   100% { background-position: 300% 0%; }
+}
+
+/* Button Metallic Light Sweep */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-25deg);
+  transition: left 0.75s ease;
+}
+
+.btn-glow:hover::after {
+  left: 140%;
+}
+
+/* Glass Card Top Neon Line */
+.glass-card {
+  position: relative;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease, left 0.4s ease, right 0.4s ease;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+  left: 5%;
+  right: 5%;
 }
 
 /* Cyber Scanning Line */
